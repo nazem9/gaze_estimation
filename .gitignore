@@ -1,0 +1,44 @@
+# Ignore Python bytecode and cache
+__pycache__/
+*.py[cod]
+
+# -- dataset data too bulk
+# Ignore CSV files
+*.csv
+*.txt
+
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
+# -- generated training data
+generated_annotations_ssd/
+l2cs_model/
+
+
+# Ignore virtual environment
+venv/
+.env/
+.lightning_studio/
+wandb/
+.netrc
+.studiorc
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+
+
+# -- configuration files
+*.json
+*.yaml
+
+
+# -- vs code
+.vscode/
+.vscode-server/
