@@ -146,7 +146,7 @@ def main():
         print(f"Epoch {epoch+1} Train Loss: {avg_epoch_loss:.4f} | Val Loss: {val_metrics['val_total_loss']:.4f}")
 
         if (epoch + 1) % 10 == 0:
-            checkpoint_path = f"ssd_resnet50_epoch_{epoch+1}.pth"
+            checkpoint_path = f"ckpt/ssd_resnet50_epoch_{epoch+1}.pth"
             torch.save({
                 'epoch': epoch + 1,
                 'model_state_dict': model.state_dict(),
@@ -155,7 +155,7 @@ def main():
             }, checkpoint_path)
             print(f"Checkpoint saved to {checkpoint_path}")
 
-    torch.save(model.state_dict(), "ssd_resnet50_final.pth")
+    torch.save(model.state_dict(), "models/ssd_resnet50_final.pth")
     print("Final model saved.")
     wandb.finish()
 
